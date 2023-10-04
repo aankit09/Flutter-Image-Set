@@ -11,11 +11,17 @@ class ImageWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+           const CircleAvatar(
+              radius: 100,
+              backgroundImage: AssetImage(
+                "assets/c.jpg",
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Image.network(
                 'https://cdn.pixabay.com/photo/2015/05/12/23/43/headphones-764864_1280.jpg',
-                height: 300,
+                height: 200,
                 width: double.infinity,
               ),
             ),
@@ -24,7 +30,10 @@ class ImageWidget extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Image.asset('assets/b.jpg'),
+              child: Image.asset(
+                'assets/b.jpg',
+                height: 200,
+              ),
             ),
           ],
         ),
